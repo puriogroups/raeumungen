@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PURIO Räumungen</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="topnav">
+    <div class="logo">PURIO Räumungen</div>
+    <ul>
+      <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
+      <li><a href="#" onclick="showPage('privat')">Privatperson</a></li>
+      <li><a href="#" onclick="showPage('gross')">Grosskunde</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seitenbereiche -->
+  <section id="home" class="page-section">
+    <header>
+      <h1>Ihr Partner für alle Fälle</h1>
+      <a href="#features" class="scroll-button">Mehr erfahren</a>
+      <p class="subline">Garantierte Bestpreisgarantie – professionell, kundenorientiert und unkompliziert</p>
+      <div class="anfrage-buttons">
+        <a href="#" class="anfrage-button" onclick="showPage('privat')">Privatperson Anfrage</a>
+        <a href="#" class="anfrage-button" onclick="showPage('gross')">Grosskunde Anfrage</a>
+      </div>
+    </header>
+
+    <section id="features" class="features">
+      <div class="feature-item"><span class="emoji">♻</span><p>Kompetentes Team & Umweltbewusstsein</p></div>
+      <div class="feature-item"><span class="emoji">✓</span><p>Unkompliziert & transparent</p></div>
+      <div class="feature-item"><span class="emoji">👑</span><p>Kunde ist König</p></div>
+      <div class="feature-item"><span class="emoji">💪</span><p>Wir stemmen alles – für Unmögliches brauchen wir nur etwas länger</p></div>
+    </section>
+
+    <section class="quote">
+      <p>Wir beraten, lösen und schaffen wieder Ordnung, wo keine herrscht.</p>
+    </section>
+
+    <section class="trust">
+      <h2>Warum MM-Entrümpelung?</h2>
+      <p>Weil Sie keine Zeit für Stress haben. Wir kümmern uns um alles – termintreu, diskret und zuverlässig.</p>
+      <a href="kontakt.html" class="button">Jetzt Kontakt aufnehmen</a>
+    </section>
+  </section>
+
+  <!-- Privatpersonen -->
+  <section id="privat" class="page-section" style="display: none;">
+    <header>
+      <h1>Entrümpelung für Privatpersonen</h1>
+      <p>Individuelle Beratung und faire Preise für Haushalte jeder Größe.</p>
+      <a href="#" class="anfrage-button" onclick="showPage('home')">Zurück zur Startseite</a>
+    </header>
+  </section>
+
+  <!-- Grosskunden -->
+  <section id="gross" class="page-section" style="display: none;">
+    <header>
+      <h1>Entrümpelung für Großkunden</h1>
+      <p>Industrielle Lösungen für Unternehmen, Büros und Lagerhallen.</p>
+      <a href="#" class="anfrage-button" onclick="showPage('home')">Zurück zur Startseite</a>
+    </header>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MM-Entrümpelung – Schnell. Ehrlich. Sauber.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function showPage(id) {
+      const sections = document.querySelectorAll('.page-section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+
+      // Navigation aktualisieren
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => link.classList.remove('active'));
+      const activeLink = [...navLinks].find(link => link.getAttribute('onclick')?.includes(id));
+      if (activeLink) activeLink.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

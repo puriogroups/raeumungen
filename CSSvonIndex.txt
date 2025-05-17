@@ -1,0 +1,272 @@
+/* Farbpalette */
+:root {
+  --beige: #e6decc;
+  --dunkelblau: #1e2a38;
+  --tannengruen: #1f4d3b;
+  --schwarz: #000000;
+  --dunkelbeige: #0a0a0a;
+  --hellgrau:  #888888;
+}
+
+body {
+  margin: 10px;
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--beige);
+  color: var(--dunkelblau);
+  line-height: 1.6;
+  
+}
+
+/* NAVIGATION */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dunkelblau);
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px 30px 30px 30px;
+  margin: 30;
+}
+
+.topnav .logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.topnav ul {
+  list-style: none;
+  margin: 20;
+  padding: 0;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.topnav a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s;
+  font-size: 1.45rem;
+}
+
+.topnav a:hover,
+.topnav a.active {
+  opacity: 0.9;
+}
+
+/* HERO */
+header {
+  background-image: url('https://plus.unsplash.com/premium_photo-1661409078904-42334551db0c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 14rem 8rem;
+  text-align: center;
+  border-radius: 30px;
+  margin: 50px;
+  overflow: hidden;
+  color: white;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* dunkler Overlay */
+  z-index: 0;
+  border-radius: 30px;
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.subline {
+  font-size: 1.2rem;
+  margin-top: 9rem;
+  opacity: 0.9;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.subline {
+  font-size: 1.2rem;
+  margin-top: 9rem;
+  opacity: 0.9;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 30px;
+  margin: 6rem 10rem;
+}
+
+.feature-item {
+  flex: 1 1 200px;
+  text-align: center;
+  color: var(--tannengruen);
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #f5f1e6;
+  transition: transform 0.2s;
+}
+
+.feature-item:hover {
+  transform: scale(1.02);
+}
+
+.emoji {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.feature-item p {
+  font-size: 1.3rem; /* 30% größer */
+  font-weight: 600;
+  margin: 0;
+}
+
+/* QUOTE */
+.quote {
+  background-image: url('https://media.istockphoto.com/id/1317136877/photo/bench-with-view-on-big-bischofsm%C3%BCtze-dachstein-mountains-alps.jpg?s=1024x1024&w=is&k=20&c=AhF7-SpmnpiD0pGS0g4Z5DxnWOaprRb9rfP1myR7Irc=');
+  
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 3rem 2rem;
+  margin: 2rem 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dunkler Overlay für bessere Lesbarkeit */
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.quote p {
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+}
+
+/* TRUST SECTION */
+.trust {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.trust .button {
+  display: inline-block;
+  background-color: var(--dunkelblau);
+  color: white;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 999px;
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.trust .button:hover {
+  background-color: var(--tannengruen);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--dunkelblau);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-radius: 30px 30px 0 0;
+}
+
+/* Smooth Scroll-Verhalten */
+html {
+  scroll-behavior: smooth;
+}
+
+/* SMOOTH SCROLL BUTTON */
+.scroll-button {
+  display: inline-block;
+  margin: 2rem auto 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #0a3d2c; /* Tannengrün */
+  color: white;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+  background-color: #062b1f; /* dunkler bei Hover */
+}
+
+/* ANFRAGE BUTTONS */
+.anfrage-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.anfrage-button {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.anfrage-button:hover {
+  background-color: darkorange;
+}
+
+.page-section {
+  padding: 2rem 4rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
